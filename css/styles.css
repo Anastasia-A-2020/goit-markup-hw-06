@@ -256,8 +256,6 @@ header .logo {
     background-color: var(--accent-color);
     cursor: pointer;
     color: var(--color-lead);
-    /*transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);*/
 }
 
 .overlay {
@@ -298,7 +296,8 @@ header .logo {
     transform: translate(-50%, -50%);
 
     width: 528px;
-    height: 521px;
+    height: 581px;
+    padding: 40px;
 
     background-color: #ffffff;
 }
@@ -313,23 +312,189 @@ header .logo {
 
     width: 30px;
     height: 30px;
+
     border-radius:50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--color-lead);
 }
 
 .close-icon {
-    width: 18px;
-    height: 18px;
+    justify-content: center;
+    transform: fill var(--duration) var(--timing-function) linear;
+}
+
+.close-icon:hover,
+.close-icon:focus  {
+    fill: var(--accent-color);
+    cursor: pointer;
 }
 
 .modal-form {
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-text {
+    margin-bottom: 12px;
+
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.150;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color:var(--color-title);
+}
+
+.modal-form-field {
+    margin-bottom: 10px;
+
+    text-align: start;
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+
+    color: var(--color-description);
+}
+
+.modal-form-input-wrapper {
+    position: relative;
+    display: block;
+    margin-top: 4px;
+}
+.modal-form-input {
+    width: 100%;
+    height: 40px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    
+}
+
+.modal-form-input:hover,
+.modal-form-input:focus,
+.modal-form-message:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    cursor: pointer;
+}
+
+.modal-form-input:hover + .modal-form-icon,
+.modal-form-input:focus + .modal-form-icon {
+    fill: var(--accent-color);
+}
+
+.modal-form-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill var(--duration) var(--timing-function);
+    display: block;
+    fill: var(--color-title);
+}
+
+.modal-form-message {
+    margin-top: 4px;
+    padding: 12px 16px;
+    width: 100%;
+    height: 120px;
+    resize: none;
+
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+
+    color: var(--color-description);
+
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color var(--duration) var(--timing-function);
+}
+
+.modal-form-policy-text {
+    margin-top: 10px;
+    margin-right: 7px;
+    margin-bottom: 30px;
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+
+    color: var(--color-description);
+}
+
+.modal-form-polyci-link {
+    color: var(--accent-color);
+}
+.modal-form-policy-text::before {
+    content: "";
+    display: inline-block;
+    margin-right: 7px;
+    width: 16px;
+    height: 15px;
+    border: 1px solid #212121;
+    border-radius: 2px;
+}
+
+.modal-form-policy:checked + .modal-form-policy-text::before {
+    border:var(--accent-color);
+    background-color: var(--accent-color);
+    background-image: url(../images/checked.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.modal-form-btn-submit {
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 50px;
+
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+
+    color: var(--color-lead);
+    background-color: var(--accent-color);
+
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.modal-form-btn-submit:hover {
+    cursor: pointer;
 }
 /*=============== END HERO ===============*/
 
 /*=============== DISCRIPTION ===============*/
 .advantage__list {
     display: flex;
-   flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 .advantage,
