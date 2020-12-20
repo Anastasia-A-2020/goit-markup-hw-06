@@ -745,7 +745,8 @@ header .logo {
     transition-timing-function: var(--timing-function);
 }
 
-.footer__slogan {
+.footer__slogan,
+.footer-form-title {
     font-family: var(--main-font);
     font-style: normal;
     font-weight: 700;
@@ -776,6 +777,10 @@ header .logo {
     margin-right: 70px;
 }
 
+.footer__slogan__contacts {
+    margin-right: 93px;
+}
+
 .footer__contacts-icon {
     fill: var(--color-lead);
 }
@@ -791,6 +796,58 @@ header .logo {
 
 .footer__contacts-item:not(:last-child) {
     margin-right: 10px;
+}
+
+.footer-form-title {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer-form-field,
+.footer-form-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-form-input {
+    margin-right: 12px;
+    padding-left: 16px;
+    width: 358px;
+    height: 50px;
+
+    color:var(--color-lead);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    background-color: transparent;
+    outline: none;
+}
+
+.footer-form-btn {
+    width: 200px;
+    height: 50px;
+
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+
+    color: var(--color-lead);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.footer-form-btn,
+.footer-form-btn-icon {
+    outline: none;
+    border: none;
+}
+
+.footer-form-btn-icon {
+    margin-left: 10px;
 }
 /*=============== END FOOTER ===============*/
 
