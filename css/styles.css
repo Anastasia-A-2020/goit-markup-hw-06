@@ -780,6 +780,7 @@ header .logo {
 }
 
 .footer__info {
+    width: 231px;
     margin-right: 70px;
 }
 
@@ -855,10 +856,6 @@ header .logo {
 
 .footer-form-btn-icon {
     margin-left: 10px;
-}
-
-.footer .conteiner {
-    justify-content: space-between;
 }
 /*=============== END FOOTER ===============*/
 
